@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Webpage!</title>
+        <style>
+          body {
+            text-align: center;
+          }
+      </style>
+
+    </head>
+    <body>
+        <h1>Names</h1>
+
+        <ul>
+            {% for name in names %}
+                <h2>{{name}}  </h2>
+            {% endfor%}
+        </ul>
+    </body>
+</html>

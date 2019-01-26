@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Webpage!</title>
+        <style>
+          body {
+            text-align: center;
+          }
+      </style>
+
+    </head>
+    <body>
+        {% if new_year %}
+            <h1>  Yes! Happy New Year </h1>
+        {% else %}
+            <h1> No </h1>
+        {% endif %}
+
+    <a href="{{ url_for('vid')}}">See more...</a>
+
+
+
+
+    </body>
+</html>
