@@ -1,9 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> My Webpage!</title>
-    </head>
-    <body>
-        Hello, Index Wrold! now Hello again. Hello third time!
-    </body>
-</html>
+{% extends "layout.html" %}
+
+{% block heading %}
+    First package
+{% endblock %}
+
+{% block body %}
+    <p>
+        Valamit kiirok
+    </p>
+
+    <ul>
+        {% for note in notes %}
+            <li>{{ note}}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="{{ url_for('uzi')}}" method="post">
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <button>Submit</button>
+    </form>
+
+
+
+    <a href="{{ url_for('video')}}">See more...</a>
+{% endblock %}
